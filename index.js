@@ -2,7 +2,7 @@ const express = require('express');
 const res = require('express/lib/response');
 const app = express();
 const bodyParser = require('body-parser')
-const port = 3000;
+const port = process.env.PORT || 3000;
 const nodemailer = require('nodemailer')
 require('dotenv').config()
 
@@ -46,6 +46,8 @@ let transporter = nodemailer.createTransport({
       res.sendfile(__dirname + '/index.html')
 
   })
+
+app.listen(port, () => console.log(`Listening on port ${port}...`));
 
 
 
