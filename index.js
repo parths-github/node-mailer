@@ -54,6 +54,4 @@ app.listen(port, () => console.log(`Listening on port ${port}...`));
 
 
 
-app.listen(port, () => {
-    console.log(`nodemailerProject is listening at http://localhost:${port}`);
-})
+
